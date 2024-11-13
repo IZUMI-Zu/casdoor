@@ -46,8 +46,8 @@ func main() {
 
 	util.SafeGoroutine(func() { object.RunSyncUsersJob() })
 
-	// beego.DelStaticPath("/static")
-	// beego.SetStaticPath("/static", "web/build/static")
+	beego.DelStaticPath("/static")
+	beego.SetStaticPath("/static", "web/build/static")
 
 	beego.BConfig.WebConfig.DirectoryIndex = true
 	beego.SetStaticPath("/swagger", "swagger")
